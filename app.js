@@ -1,6 +1,7 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const cors = require("cors");
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -17,6 +18,8 @@ const {
 
 const app = express();
 const port = 3000;
+
+app.use(cors());
 
 const CHAVE_SECRETA = "macacobanana";
 
